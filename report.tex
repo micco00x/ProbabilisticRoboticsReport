@@ -115,7 +115,17 @@ pose-landmark (projective) constraints.
 \end{figure}
 
 \section{Conclusion}
-Stuff.
+The implemented algorithm obtained great results in both the trajectory and
+the map reconstruction. Nevertheless, it can be improved a lot by better
+exploiting the given data. More pose-pose constraints can be added by
+triangulating the poses (e.g. by using the 8-point algorithm), landmark-landmark
+constraints could be added by considering, again, the given relations between
+poses and landmarks due to the camera. The k-d tree implementation can be
+improved by considering that the landmarks should be initialized with the
+appearance of the landmarks coming from the measurements. In the end, the
+least squares implementation is not exploiting the sparsity of the matrix $H$,
+which should boost the performances and massively decrease the amount of memory
+used in this step.
 
 \clearpage
 \bibliographystyle{ieeetr}
